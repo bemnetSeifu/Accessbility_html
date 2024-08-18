@@ -1,44 +1,57 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: Helvetica, sans-serif;
-    background-color: #800080;
+    font-family: sans-serif;
+    background: #334;
 }
-p {
+.user-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    color: #334;
+}
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 1px solid #334;
+}
+.user-info h3 {
     margin: 0;
-    text-align: center;
-    font-size: 18px;
-    background-color: #ff0000;
-    padding-top: 40px;
-    padding-bottom: 40px;
 }
-main {
-    width: 100vw;
-    height: 100vh;
-    color: #0000aa;
+.status {
+    display: inline-flex;
+    align-items: center;
 }
-.red {
-    background-color: #dd8b20f3;
+.status .indicator {
+    width: 25px;
+    height: 25px;
+    background-color: green;
+    border-radius: 50%;
+    margin-right: 5px;
+    color: white;
+    position: relative;
 }
-.orange {
-    background-color: #62a806;
+.status .online {
+    background-color: green;
+   
 }
-.yellow {
-    background-color: #0bbd79e8;
+.status .offline {
+    background-color: red;
+    font-weight: bold;
+    border-radius: 25%;
 }
-.green {
-    background-color: #399ee0;
+.status .indicator span {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 7px;
 }
-.blue {
-    background-color: #a08fc7;
-}
-.purple {
-    background-color: #b987b9;
-}
-
-/*
-
-Challenge:
-Change the color of each text so that they all fulfill the WCAG's AA requirements (a contrast ratio of 4.5)
-
-*/
